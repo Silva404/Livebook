@@ -1,6 +1,10 @@
 import express, { Request, Response } from "express";
 import { google } from "googleapis";
 import bodyParser from "body-parser";
+import {
+  GoogleCalendarPayload,
+  formatCalendarEventIntoTimeEntry,
+} from "./formater";
 
 const app = express();
 
@@ -44,7 +48,8 @@ app.get("/", async (req, res) => {
     timeMax: `${date}T23:59:59Z`,
     maxResults: 10,
   });
-  console.log(items);
+  const data = formatCalendarEventIntoTimeEntry(items as GoogleCalendarPayload);
+  console.log(data);
 
   res.send("yay");
 });

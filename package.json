@@ -2,9 +2,9 @@
   "name": "livebook",
   "version": "1.0.0",
   "description": "",
-  "main": "main.ts",
+  "main": "api.ts",
   "scripts": {
-    "start": "nodemon index.ts",
+    "start": "nodemon api.ts",
     "test": "node --test --watch --require ts-node/register **/*.test.ts"
   },
   "keywords": [],

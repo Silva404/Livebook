@@ -24,7 +24,7 @@ import {
   CalendarEvent,
   LinearIssue,
   TimeEntries,
-  convertLinearIssueToTimeEntry,
+  formatLinearIssueToTimeEntry,
   convertTimeEntriesToDateString,
   mergeTimeEntries,
   newDateFromHour,
@@ -86,7 +86,7 @@ test("should create a report start the time entries", () => {
 
   const result: TimeEntries = mergeTimeEntries(
     calendarEvents,
-    convertLinearIssueToTimeEntry(linearIssues),
+    formatLinearIssueToTimeEntry(linearIssues),
   );
   const expected: TimeEntries = [
     {
