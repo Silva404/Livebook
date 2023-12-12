@@ -105,7 +105,7 @@ export function formatCalendarEventIntoTimeEntry(
   }));
 }
 
-export function convertLinearIssueToTimeEntry(entries: Array<LinearIssue>) {
+export function formatLinearIssueToTimeEntry(entries: Array<LinearIssue>) {
   let timeEntries: Array<TimeEntry> = [];
 
   for (const entry of entries) {

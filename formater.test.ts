@@ -3,7 +3,7 @@ import { test } from "node:test";
 import {
   LinearIssue,
   TimeEntries,
-  convertLinearIssueToTimeEntry,
+  formatLinearIssueToTimeEntry,
   formatCalendarEventIntoTimeEntry,
 } from "./formater";
 
@@ -81,5 +81,5 @@ test("should format linear issues to time entries", () => {
       type: "started",
     },
   ];
-  console.log(convertLinearIssueToTimeEntry(issues));
+  console.log(formatLinearIssueToTimeEntry(issues));
 });

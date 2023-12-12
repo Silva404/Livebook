@@ -57,6 +57,7 @@ app.post("/linear", (req: Request, res: Response) => {
     title: payload.data.title,
     state: payload.data.state.type,
   };
+  // insert it
   console.log(data);
   res.send(200);
 });
